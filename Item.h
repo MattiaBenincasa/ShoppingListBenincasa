@@ -9,11 +9,13 @@
 
 class Item {
 public:
-    Item (std::string& n, std::string& cat, int qt) : name(n), quantity(qt), category(cat) {}
+    Item (std::string& n, std::string& cat, int qt);
 
     int getQuantity() const{
         return quantity;
     }
+
+    bool operator == (const Item& right) const;
 
 private:
     std::string name;

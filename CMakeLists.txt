@@ -3,4 +3,4 @@ project(ShoppingList)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ShoppingList main.cpp Item.h Observer.h Subject.h)
+add_executable(ShoppingList main.cpp Item.h Observer.h Subject.h List.cpp List.h Item.cpp)

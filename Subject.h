@@ -8,6 +8,7 @@
 #include "Observer.h"
 
 class Subject {
+public:
     virtual void addUser(Observer* o) = 0;
     virtual void removeUser(Observer* o) = 0;
     virtual void notify() = 0;
