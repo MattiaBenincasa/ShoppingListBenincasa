@@ -45,3 +45,8 @@ bool List::operator==(const List& right) const {
     else
         return false;
 }
+
+void List::printItems() const {
+    for(auto const &item : items)
+        std::cout << "Name: " << item.getName() << " Qt: " << item.getQuantity() << std::endl;
+}

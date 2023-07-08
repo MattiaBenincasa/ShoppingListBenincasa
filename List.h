@@ -4,6 +4,7 @@
 
 #ifndef SHOPPINGLIST_LIST_H
 #define SHOPPINGLIST_LIST_H
+#include <iostream>
 #include <string>
 #include <list>
 #include "Item.h"
@@ -21,12 +22,18 @@ public:
         return items.size();
     }
 
+    std::string getName() const {
+        return name;
+    }
+
     bool operator == (const std::string& right) const;
     bool operator == (const List& right) const;
 
     void addUser(Observer* o) override;
     void removeUser(Observer* o) override;
     void notify() override;
+
+    void printItems() const;
 
 
 private:

@@ -15,6 +15,10 @@ public:
         return quantity;
     }
 
+    std::string getName() const {
+        return name;
+    }
+
     bool operator == (const Item& right) const;
     bool operator == (const std::string& right) const;
 

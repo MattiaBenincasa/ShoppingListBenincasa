@@ -22,7 +22,7 @@ void User::addItem(std::string& listName, std::string& itemName, int quantity, s
     findList->addItem(itemName, cat, quantity);
 }
 
-void User::removeItem(std::string& listName, std::string itemName) {
+void User::removeItem(std::string& listName, std::string& itemName) {
     auto findList = std::find(lists.begin(), lists.end(), listName);
     findList->removeItem(itemName);
 }
@@ -33,4 +33,14 @@ void User::update() {
         count += list.getSize();
 
     this->itemsToBuy = count;
+}
+
+void User::printLists() const {
+    for(auto const& list : lists)
+        std::cout << list.getName() << std::endl;
+}
+
+void User::printList(std::string& nameList) const {
+    auto findList = std::find(lists.begin(), lists.end(), nameList);
+    findList->printItems();
 }

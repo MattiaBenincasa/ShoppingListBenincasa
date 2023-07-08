@@ -4,6 +4,7 @@
 
 #ifndef SHOPPINGLIST_USER_H
 #define SHOPPINGLIST_USER_H
+#include <iostream>
 #include "List.h"
 #include <string>
 #include <algorithm>
@@ -16,8 +17,11 @@ public:
     void addList(std::string& nameList);
     void removeList(std::string& nameList);
     void addItem(std::string& listName, std::string& itemName, int quantity, std::string& cat);
-    void removeItem(std::string& listName, std::string itemName);
+    void removeItem(std::string& listName, std::string& itemName);
     void update() override;
+
+    void printLists() const;
+    void printList(std::string& nameList) const;
 private:
     std::string nickname;
     std::list<List> lists;
