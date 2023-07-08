@@ -21,6 +21,9 @@ public:
         return items.size();
     }
 
+    bool operator == (const std::string& right) const;
+    bool operator == (const List& right) const;
+
     void addUser(Observer* o) override;
     void removeUser(Observer* o) override;
     void notify() override;
