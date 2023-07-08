@@ -11,3 +11,10 @@ bool Item::operator==(const Item &right) const {
     else
         return false;
 }
+
+bool Item::operator==(const std::string &right) const {
+    if(name == right)
+        return true;
+    else
+        return false;
+}

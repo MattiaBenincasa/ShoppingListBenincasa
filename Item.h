@@ -16,6 +16,7 @@ public:
     }
 
     bool operator == (const Item& right) const;
+    bool operator == (const std::string& right) const;
 
 private:
     std::string name;

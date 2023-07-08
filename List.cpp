@@ -6,13 +6,15 @@
 
 List::List(std::string &n) : name(n) {}
 
-void List::addItem(const Item& item) {
+void List::addItem(std::string& itemName, std::string& category, int quantity) {
+    Item item(itemName, category, quantity);
     items.push_back(item);
     notify();
 }
 
-void List::removeItem(const Item& item) {
-    items.remove(item);
+void List::removeItem(std::string& itemName) {
+    auto findItem = std::find(items.begin(), items.end(), itemName);
+    items.remove(*findItem);
     notify();
 }
 

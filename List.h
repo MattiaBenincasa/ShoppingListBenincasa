@@ -14,8 +14,8 @@ class List : public Subject {
 public:
     explicit List(std::string& n);
 
-    void addItem(const Item& item);
-    void removeItem(const Item& item);
+    void addItem(std::string& itemName, std::string& category, int quantity);
+    void removeItem(std::string& itemName);
 
     int getSize() const{
         return items.size();

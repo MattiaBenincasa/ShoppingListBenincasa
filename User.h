@@ -15,8 +15,8 @@ public:
 
     void addList(std::string& nameList);
     void removeList(std::string& nameList);
-    void addItem(List& list, Item& item);
-    void removeItem(List& list, Item& item);
+    void addItem(std::string& listName, std::string& itemName, int quantity, std::string& cat);
+    void removeItem(std::string& listName, std::string itemName);
     void update() override;
 private:
     std::string nickname;

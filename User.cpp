@@ -13,16 +13,18 @@ void User::addList(std::string& nameList) {
 }
 
 void User::removeList(std::string& nameList) {
-    auto findItem = std::find(lists.begin(), lists.end(), nameList);
-    lists.remove(*findItem);
+    auto findList = std::find(lists.begin(), lists.end(), nameList);
+    lists.remove(*findList);
 }
 
-void User::addItem(List &list, Item& item) {
-    list.addItem(item);
+void User::addItem(std::string& listName, std::string& itemName, int quantity, std::string& cat) {
+    auto findList = std::find(lists.begin(), lists.end(), listName);
+    findList->addItem(itemName, cat, quantity);
 }
 
-void User::removeItem(List &list, Item &item) {
-    list.removeItem(item);
+void User::removeItem(std::string& listName, std::string itemName) {
+    auto findList = std::find(lists.begin(), lists.end(), listName);
+    findList->removeItem(itemName);
 }
 
 void User::update() {
