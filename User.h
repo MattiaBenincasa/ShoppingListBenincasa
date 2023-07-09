@@ -14,6 +14,18 @@ class User : public Observer{
 public:
     explicit User(std::string& name);
 
+    std::string GetNickName() const {
+        return nickname;
+    }
+
+    std::list<List> getLists() const {
+        return lists;
+    }
+
+    int getItemsToBuy() const {
+        return itemsToBuy;
+    }
+
     void addList(std::string& nameList);
     void removeList(std::string& nameList);
     void addItem(std::string& listName, std::string& itemName, int quantity, std::string& cat);
