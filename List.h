@@ -26,6 +26,10 @@ public:
         return name;
     }
 
+    std::list<Item> getItems() const {
+        return items;
+    }
+
     bool operator == (const std::string& right) const;
     bool operator == (const List& right) const;
 

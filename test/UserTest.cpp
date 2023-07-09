@@ -6,7 +6,7 @@
 #include "gtest/gtest.h"
 #include "../User.h"
 
-TEST(User, TestConstructot){
+TEST(User, TestConstructor){
     std::string uName = "UserName";
     User u(uName);
     ASSERT_EQ(uName, u.GetNickName());
